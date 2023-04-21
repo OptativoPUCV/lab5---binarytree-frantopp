@@ -49,7 +49,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
 
 void insertTreeMap(TreeMap * tree, void* key, void * value) {
 //Hacer
-   TreeNode* aux = tree->root;
+  TreeNode* nuevoNode = createTreeNode(key, value);
 }
 
 TreeNode * minimum(TreeNode * x){
