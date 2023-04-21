@@ -110,7 +110,7 @@ Pair * firstTreeMap(TreeMap * tree) {
   //Hacer
   TreeNode* current = tree->root;
   current = minimum(current);
-  return NULL;
+  return current->pair;
 }
 
 Pair * upperBound(TreeMap * tree, void* key) {
