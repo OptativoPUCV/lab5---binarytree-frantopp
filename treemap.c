@@ -19,7 +19,7 @@ struct TreeMap {
     int (*lower_than) (void* key1, void* key2);
 };
 
-TreeNode * createTreeNode(void* key, void * value) {
+TreeNode * createTreeNode(void* key, void * value) { 
     TreeNode * new = (TreeNode *)malloc(sizeof(TreeNode));
     if (new == NULL) return NULL;
     new->pair = (Pair *)malloc(sizeof(Pair));
@@ -36,21 +36,22 @@ int is_equal(TreeMap* tree, void* key1, void* key2){
 }
 
 TreeMap * createTreeMap(int (*lower_than) (void* key1, void* key2)) {
-
+//facil
     //new->lower_than = lower_than;
     return NULL;
 }
 
 Pair * searchTreeMap(TreeMap * tree, void* key) {
+  //facil
     return NULL;
 }
 
 void insertTreeMap(TreeMap * tree, void* key, void * value) {
-
+//facil
 }
 
 TreeNode * minimum(TreeNode * x){
-
+//facil
     return NULL;
 }
 
@@ -69,6 +70,7 @@ void eraseTreeMap(TreeMap * tree, void* key){
 }
 
 Pair * firstTreeMap(TreeMap * tree) {
+  //facil
     return NULL;
 }
 
