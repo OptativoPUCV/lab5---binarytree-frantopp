@@ -50,6 +50,12 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
 void insertTreeMap(TreeMap * tree, void* key, void * value) {
 //Hacer
   TreeNode* nuevoNode = createTreeNode(key, value);
+
+  if (tree->root == NULL) {
+    tree->root = nuevoNodo;
+    tree->current = nuevoNodo;
+    return;
+  }
 }
 
 TreeNode * minimum(TreeNode * x){
