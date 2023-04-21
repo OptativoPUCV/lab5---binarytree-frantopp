@@ -38,7 +38,7 @@ int is_equal(TreeMap* tree, void* key1, void* key2){
 TreeMap * createTreeMap(int (*lower_than) (void* key1, void* key2)) {
 //facil
   TreeMap* tree = (TreeMap *) malloc(sizeof(TreeMap));
-  
+  tree->root = NULL;
     //new->lower_than = lower_than;
     return tree;
 }
