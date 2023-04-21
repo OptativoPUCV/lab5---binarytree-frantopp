@@ -39,8 +39,8 @@ TreeMap * createTreeMap(int (*lower_than) (void* key1, void* key2)) {
 //facil
   TreeMap* tree = (TreeMap *) malloc(sizeof(TreeMap));
   tree->root = NULL;
-    //new->lower_than = lower_than;
-    return tree;
+  new->lower_than = lower_than;
+  return tree;
 }
 
 Pair * searchTreeMap(TreeMap * tree, void* key) {
