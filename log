@@ -197,3 +197,14 @@ treemap.c:47:13: error: unused variable ‘auxiliar’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 f9f6d56
+Fri 21 Apr 2023 11:53:38 PM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+treemap.c: In function ‘searchTreeMap’:
+treemap.c:49:10: error: ‘aux’ undeclared (first use in this function)
+   49 |   while (aux != NULL){
+      |          ^~~
+treemap.c:49:10: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+ff7b3a5

@@ -48,7 +48,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
   
   while (aux != NULL){
      if (is_equal(tree, key, aux->pair->key) == 1) {
-      tree->current = aux;
+      tree->current = auxiliar;
       return aux->pair;
     }
     
