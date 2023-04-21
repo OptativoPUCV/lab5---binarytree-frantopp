@@ -108,7 +108,9 @@ void eraseTreeMap(TreeMap * tree, void* key){
 
 Pair * firstTreeMap(TreeMap * tree) {
   //Hacer
-    return NULL;
+  TreeNode* current = tree->root;
+  current = minimum(current);
+  return NULL;
 }
 
 Pair * upperBound(TreeMap * tree, void* key) {
