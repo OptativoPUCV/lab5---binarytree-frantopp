@@ -19,6 +19,12 @@ struct TreeMap {
     int (*lower_than) (void* key1, void* key2);
 };
 
+int is_equal(TreeMap* tree, void* key1, void* key2){
+    if(tree->lower_than(key1,key2)==0 &&  
+        tree->lower_than(key2,key1)==0) return 1;
+    else return 0;
+}
+
 TreeNode * createTreeNode(void* key, void * value) { 
     TreeNode * new = (TreeNode *)malloc(sizeof(TreeNode));
     if (new == NULL) return NULL;
@@ -29,12 +35,6 @@ TreeNode * createTreeNode(void* key, void * value) {
     return new;
 }
 
-int is_equal(TreeMap* tree, void* key1, void* key2){
-    if(tree->lower_than(key1,key2)==0 &&  
-        tree->lower_than(key2,key1)==0) return 1;
-    else return 0;
-}
-
 TreeMap * createTreeMap(int (*lower_than) (void* key1, void* key2)) {
   TreeMap* tree = (TreeMap *) malloc(sizeof(TreeMap));
   tree->root = NULL;
@@ -43,7 +43,6 @@ TreeMap * createTreeMap(int (*lower_than) (void* key1, void* key2)) {
 }
 
 Pair * searchTreeMap(TreeMap * tree, void* key) {
-  //hacer
   TreeNode* auxiliar = tree->root;
   
   while (auxiliar != NULL){
@@ -59,7 +58,6 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
 }
 
 void insertTreeMap(TreeMap * tree, void* key, void * value) {
-//Hacer
   TreeNode* nuevoNode = createTreeNode(key, value);
 
   if (tree->root == NULL) {
@@ -94,7 +92,6 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
 }
 
 TreeNode * minimum(TreeNode * x){
-//Hacer
   if (x == NULL) return NULL;
   
   while(x->left != NULL) {
@@ -105,7 +102,23 @@ TreeNode * minimum(TreeNode * x){
 
 
 void removeNode(TreeMap * tree, TreeNode* node) {
+//Hacer
+}
 
+Pair * firstTreeMap(TreeMap * tree) {
+  TreeNode* current = tree->root;
+  current = minimum(current);
+  return current->pair;
+}
+
+Pair * nextTreeMap(TreeMap * tree) {
+  //Hacer
+    return NULL;
+}
+
+Pair * upperBound(TreeMap * tree, void* key) {
+  //Hacer
+    return NULL;
 }
 
 void eraseTreeMap(TreeMap * tree, void* key){
@@ -115,19 +128,4 @@ void eraseTreeMap(TreeMap * tree, void* key){
     TreeNode* node = tree->current;
     removeNode(tree, node);
 
-}
-
-Pair * firstTreeMap(TreeMap * tree) {
-  //Hacer
-  TreeNode* current = tree->root;
-  current = minimum(current);
-  return current->pair;
-}
-
-Pair * upperBound(TreeMap * tree, void* key) {
-    return NULL;
-}
-
-Pair * nextTreeMap(TreeMap * tree) {
-    return NULL;
 }
