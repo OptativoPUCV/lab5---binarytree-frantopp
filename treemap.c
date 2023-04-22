@@ -110,6 +110,10 @@ void removeNode(TreeMap * tree, TreeNode* node) {
     free(node);
     return;
    }
+
+  else if(node->left == NULL || node->right == NULL){
+    
+  }
   
 }
 
