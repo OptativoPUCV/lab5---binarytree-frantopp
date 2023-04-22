@@ -102,7 +102,15 @@ TreeNode * minimum(TreeNode * x){
 
 
 void removeNode(TreeMap * tree, TreeNode* node) {
-//Hacer
+  if(node == NULL) return;
+
+  if(node->left == NULL && node->right == NULL){
+    if(tree->lower_than(node->pair->key,node->parent->pair->key) == 0) node->parent->right = NULL;
+    else node->parent->left = NULL;
+    free(node);
+    return;
+   }
+  
 }
 
 Pair * firstTreeMap(TreeMap * tree) {
