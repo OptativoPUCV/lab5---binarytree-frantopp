@@ -137,7 +137,8 @@ Pair * firstTreeMap(TreeMap * tree) {
 }
 
 Pair * nextTreeMap(TreeMap * tree) {
-  //Hacer
+  if (tree->current == NULL) return NULL;
+  
     return NULL;
 }
 
