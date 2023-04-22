@@ -47,11 +47,13 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
   TreeNode* auxiliar = tree->root;
   
   while (auxiliar != NULL){
-     if (is_equal(tree, key, aux->pair->key) == 1) {
+     if (is_equal(tree, key, auxiliar->pair->key) == 1) {
       tree->current = auxiliar;
-      return aux->pair;
+      return auxiliar->pair;
     }
-    
+
+    else if (tree->lower_than(key,auxiliar->pair->key) == 0) auxiliar = auxiliar->right;
+    else if (tree->lower_than(key,auxiliar->pair->key) == 1) auxiliar = auxiliar->left;
   }
     return NULL;
 }
