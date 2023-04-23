@@ -143,13 +143,15 @@ Pair * nextTreeMap(TreeMap * tree) {
     while (current->left != NULL) {
       current = current->left;
     }
-  TreeNode *inicial = tree->current->parent;
-    while (inicial != NULL && tree->current == inicial->right) {
-        tree->current = inicial;
-        inicial = inicial->parent;
-    }
+  
     
   }
+  TreeNode *inicial = tree->current->parent;
+  while (inicial != NULL && tree->current == inicial->right) {
+    tree->current = inicial;
+    inicial = inicial->parent;
+  }
+  
     return NULL;
 }
 
