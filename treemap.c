@@ -161,7 +161,10 @@ Pair * nextTreeMap(TreeMap * tree) {
 }
 
 Pair * upperBound(TreeMap * tree, void* key) {
-  //Hacer
+  if(tree->root == NULL) return NULL;
+  tree->current = tree->root;
+  TreeNode *ub_node = NULL;
+
     return NULL;
 }
 
